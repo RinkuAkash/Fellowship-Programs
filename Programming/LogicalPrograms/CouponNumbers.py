@@ -8,4 +8,4 @@ while(len(distinct_set)!=N):
         distinct_set.add(New_no)
     count+=1
 print(distinct_set)
-print("Total random numbers need to have all distinct numbers are: %d"%count)
+print("Total random numbers need to have all distinct numbers are: {0}".format(count))

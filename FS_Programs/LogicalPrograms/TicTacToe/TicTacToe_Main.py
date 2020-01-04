@@ -3,7 +3,7 @@ sys.path.append("/home/rinku/Desktop/bridgelabz/FS_Programs/Utility")
 
 import Input
 
-from TikTacToe_BL import *
+from TicTacToe_BL import *
 
 game=True
 
@@ -19,13 +19,20 @@ while(game):
         ret_computer=check_computer()
         ar=ar_state()
         if ret_player and ret_computer:
+            printBoard()
             print("It's a tie")
             game=False
         elif ret_computer:
+            printBoard()
             print("Try next time")
             game=False
         elif ret_player:
+            printBoard()
             print("Congratulations, you won")
+            game=False
+        elif ar_check():
+            printBoard()
+            print("Better luck next time")
             game=False
         else:
              computer_cell=random.randint(1,9)
@@ -35,6 +42,7 @@ while(game):
              assign(computer_cell)
              ret_computer=check_computer()
              if ret_computer:
+                 printBoard()
                  print("Try next time")
                  game=False
     else:

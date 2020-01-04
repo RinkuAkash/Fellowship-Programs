@@ -15,6 +15,16 @@ def check(cell):
     else:
         return False
 
+def ar_check():
+    count=0
+    for i in range(1,10):
+        if ar[i-1]=="O" or ar[i-1]=="X":
+            count+=1
+    if count==9:
+        return True
+    else:
+        return False
+
 def check_computer():
     if ar[0]==ar[1]==ar[2]=='O':
         return True
